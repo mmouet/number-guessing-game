@@ -1,0 +1,48 @@
+/* Michael Mouet - JS Number Guessing Game */
+
+body {
+  background-color: black;
+}
+
+.section-1 {
+  display: flex;
+  justify-content: center;
+  padding: 20vw 0;
+}
+
+.p1 {
+  font-family: 'Creepster';font-size: 22px;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.guess-label {
+  font-family: 'Abel';font-size: 22px;
+  color: white;
+  display: ;
+}
+
+
+@media (max-width: 767.98px) {
+  
+  form {
+  	display: flex;
+  	justify-content: center;
+  }
+
+  .section-1 {
+  	padding: 75vw 20vw;
+  }
+
+  .p1 {
+  	display: flex;
+  	text-align: center;
+  }
+
+
+
+}
