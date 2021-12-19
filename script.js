@@ -15,6 +15,35 @@
 // Have a statement say which guess they are on. If they get to the fourth guess, they fail.
 
 
+// const min = Math.ceil(1);
+// const max = Math.floor(100);
+// const randomNumber = Math.round(Math.random(min, max) * 100);
+// let guesses = 0
+
+// const numberGuess = () => {
+// 	const userValue = Number(document.getElementById("guess").value);
+
+// 	if (userValue === randomNumber) {
+// 		alert("You win! You got " + randomNumber);
+// 	} else if (userValue < randomNumber) {
+// 		guesses++
+// 		alert("Your number is too low. You have used (" + guesses + ") guesses.");
+// 	} else if (userValue > randomNumber) {
+// 		guesses++
+// 		alert("Your number is too high. You have used (" + guesses + ") guesses.");
+// 	};
+
+// 	if (guesses === 3) {
+// 		alert("You lose! The answer was " + randomNumber + ". Please refresh to try again.")
+// 		document.getElementById("submit").disabled = true;
+// 	};
+// };
+
+
+
+// REVISION
+// Added a reset condition when the user wins by resetting the number of guesses and clearing the input field. 
+
 const min = Math.ceil(1);
 const max = Math.floor(100);
 const randomNumber = Math.round(Math.random(min, max) * 100);
@@ -25,12 +54,15 @@ const numberGuess = () => {
 
 	if (userValue === randomNumber) {
 		alert("You win! You got " + randomNumber);
+		document.getElementById("guess").reset(); 
+		return guesses = 0 
+
 	} else if (userValue < randomNumber) {
 		guesses++
-		alert("Your number is too low. You have used (" + guesses + ") guesses.");
+		alert("Your number is too low. You have used (" + guesses + ") guesses." );
 	} else if (userValue > randomNumber) {
 		guesses++
-		alert("Your number is too high. You have used (" + guesses + ") guesses.");
+		alert("Your number is too high. You have used (" + guesses + ") guesses." );
 	};
 
 	if (guesses === 3) {
